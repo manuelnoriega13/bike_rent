@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="layout :: head">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<header th:replace="layout :: header">
+</header>
+
+<div class="container">
+    <div class="text-secondary border">
+        <h1>Promo</h1>
+    </div>
+    <div>
+        <table class="table table-striped">
+            <tr>
+                <th>person</th>
+                <th>bike rent</th>
+                <th>time</th>
+                <th>among</th>
+                <th>bikes</th>
+                <th>price</th>
+                <th>final price</th>
+            </tr>
+            <tr th:each="Promo: ${promo}">
+                <th th:text="${Promo.person}"></th>
+                <th th:text="${Promo.rented}"></th>
+                <th th:text="${Promo.time}"></th>
+                <th th:text="${Promo.among}"></th>
+                <th th:text="${Promo.bikes}"></th>
+                <th th:text="${Promo.price}"></th>
+                <th th:text="${Promo.finalPrice}"></th>
+        </table>
+    </div>
+</div>
+
+<footer th:replace="layout :: footer">
+</footer>
+</body>
+</html>

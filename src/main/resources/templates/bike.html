@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="layout :: head">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<header th:replace="layout :: header">
+</header>
+
+<div class="container">
+    <div class="text-secondary border">
+        <h1>Bike</h1>
+    </div>
+    <div>
+        <table class="table table-striped">
+            <tr>
+                <th>id</th>
+                <th>type</th>
+            </tr>
+            <tr th:each="Bike: ${bike}">
+                <th th:text="${Bike.id}"></th>
+                <th th:text="${Bike.type}"></th>
+        </table>
+    </div>
+</div>
+
+<footer th:replace="layout :: footer">
+</footer>
+</body>
+</html>

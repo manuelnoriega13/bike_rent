@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="layout :: head">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<header th:replace="layout :: header">
+</header>
+
+<div class="container">
+    <div class="text-secondary border">
+        <h1>Person</h1>
+    </div>
+    <div>
+        <table class="table table-striped">
+            <tr>
+                <th>name</th>
+                <th>direction</th>
+                <th>phone number</th>
+            </tr>
+            <tr th:each="Person: ${person}">
+                <th th:text="${Person.name}"></th>
+                <th th:text="${Person.direction}"></th>
+                <th th:text="${Person.phoneNumer}"></th>
+
+        </table>
+    </div>
+</div>
+
+<footer th:replace="layout :: footer">
+</footer>
+</body>
+</html>
